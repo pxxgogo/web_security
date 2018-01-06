@@ -12,6 +12,7 @@ def get_cookies_from_learn(request):
 def attack_info_view(request):
     response = render(request, 'index.html')
     print(response)
+    response["X-Frame-Options"] = ""
     return response
 
 
