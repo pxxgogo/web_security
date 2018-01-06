@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def get_cookies_from_learn(request):
     if request.method == 'POST':
         print(request.POST)
 
+@csrf_exempt
 def attack_info_view(request):
     return render(request, 'index.html')
 
