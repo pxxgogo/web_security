@@ -10,7 +10,9 @@ def get_cookies_from_learn(request):
 
 @csrf_exempt
 def attack_info_view(request):
-    return render(request, 'index.html')
+    response = render(request, 'index.html')
+    print(response)
+    return response
 
 
 
