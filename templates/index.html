@@ -6,7 +6,7 @@
 </head>
 <body>
 <form method="post" action="https://usereg.tsinghua.edu.cn/ip_login.php"
-      id="crack-ip-form" target="crack_iframe" style="visibility: hidden">
+      id="crack-ip-form" target="crack_ip_iframe" style="visibility: hidden">
     <input type="hidden" name="n" value="100">
     <input type="hidden" name="is_pad" value="1">
     <input type="hidden" name="type" value="10">
@@ -15,8 +15,12 @@
     <input type="text" name="user_ip" placeholder="需要上网的ip地址" value="166.111.139.183">
     <input id="crack-ip-button" type="submit" value="Crack">
 
-    <iframe hidden src="http://info.tsinghua.edu.cn/minichan/roamaction.jsp?id=389" name="crack_iframe"
+    <iframe hidden src="" name="crack_iframe"
             id="crack-iframe">
+    </iframe>
+
+    <iframe hidden src="" name="crack_ip_iframe"
+            id="crack-ip-iframe">
     </iframe>
 </form>
 <div id="info-iframe-container"></div>
