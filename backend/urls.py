@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cookies_storage.views import get_cookies_from_learn, attack_info_view
+from cookies_storage.views import get_cookies_from_learn, attack_info_view, get_cookies_from_info
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('send_cookie_learn', get_cookies_from_learn),
+    path('send_cookie', get_cookies_from_info),
     path('attack_info', attack_info_view)
 ]

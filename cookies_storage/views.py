@@ -15,7 +15,11 @@ def attack_info_view(request):
     response["X-Frame-Options"] = ""
     return response
 
-
+@csrf_exempt
+def get_cookies_from_info(request):
+    if request.method == 'POST':
+        print(request.POST)
+        return JsonResponse({"return_code": 0})
 
 
 # Create your views here.
